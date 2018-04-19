@@ -17,7 +17,7 @@ public class No {
     /**
      * Construtor com argumentos.
      *
-     * @param dado um valor do tipo inteiro
+     * @param dado um valor do tipo inteiro.
      */
     public No(int dado) {
         this.dado = dado;
@@ -26,7 +26,7 @@ public class No {
     /**
      * Recuporador de dado.
      *
-     * @return Um inteiro com o dado do nó
+     * @return Um inteiro com o dado do nó.
      */
     public int getDado() {
         return dado;
@@ -42,7 +42,9 @@ public class No {
     }
 
     /**
-     * Retorna o valor em String do dado
+     * Retorna o valor em String do dado.
+     * 
+     * @return Uma string com o dado do nó.
      */
     public String toString() {
         return getDado() + "";
