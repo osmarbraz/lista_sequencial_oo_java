@@ -50,7 +50,9 @@ public class Principal {
                     break;
                 }
                 case 2: {
+                    //Instancia um novo nó
                     No novo = new No();
+                    //Preenche o valor do dado do nó
                     novo.setDado(leitura());
                     if (lst.inserirInicio(novo) == true) {
                         JOptionPane.showMessageDialog(null, "Nó inserido no início com Sucesso!");
@@ -60,7 +62,9 @@ public class Principal {
                     break;
                 }
                 case 3: {
+                    //Instancia um novo nó
                     No novo = new No();
+                    //Preenche o valor do dado do nó
                     novo.setDado(leitura());
                     if (lst.inserirFim(novo) == true) {
                         JOptionPane.showMessageDialog(null, "Nó inserido no fim com Sucesso!");
@@ -70,8 +74,11 @@ public class Principal {
                     break;
                 }
                 case 4: {
+                    //Le a posição a ser inserido o nó
                     int k = Integer.parseInt(JOptionPane.showInputDialog("Digite a posição:"));
+                    //Instancia um novo nó
                     No novo = new No();
+                    //Preenche o valor do dado do nó
                     novo.setDado(leitura());
                     if (lst.inserirPosicao(novo, k) == true) {
                         JOptionPane.showMessageDialog(null, "Nó inserido na posição " + k + " com Sucesso!");
@@ -81,7 +88,9 @@ public class Principal {
                     break;
                 }
                 case 5: {
+                    //Instancia um novo nó
                     No novo = new No();
+                    //Preenche o valor do dado do nó
                     novo.setDado(leitura());
                     if (lst.inserirOrdenado(novo) == true) {
                         JOptionPane.showMessageDialog(null, "Nó inserido ordenado com Sucesso!");
@@ -116,7 +125,9 @@ public class Principal {
                     break;
                 }
                 case 9: {
+                    //Instancia um novo nó
                     No valor = new No();
+                    //Preenche o valor do dado do nó
                     valor.setDado(Integer.parseInt(JOptionPane.showInputDialog("Digite o valor do Nó a ser excluído:")));
                     if (lst.excluirValor(valor)) {
                         JOptionPane.showMessageDialog(null, "O valor " + valor.getDado() + " foi excluído com Sucesso!");
@@ -126,7 +137,9 @@ public class Principal {
                     break;
                 }
                 case 10: {
+                    //Instancia um novo nó
                     No valor = new No();
+                    //Preenche o valor do dado do nó
                     valor.setDado(Integer.parseInt(JOptionPane.showInputDialog("Digite o valor a ser procurado:")));
                     int posicao = lst.posicaoValor(valor);
                     JOptionPane.showMessageDialog(null, "O valor " + valor.getDado() + " esta na posição " + posicao);
