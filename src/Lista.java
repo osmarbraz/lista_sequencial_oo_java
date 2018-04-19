@@ -23,10 +23,20 @@ public class Lista {
         n = 0;
     }
 
+    /**
+     * Recuporador de N.
+     *
+     * @return Um inteiro com a quantidade de nós da lista.
+     */
     public int getN() {
         return n;
     }
 
+    /**
+     * Modificador de N.
+     *
+     * @param n Um valor inteiro a ser atribuído para a N.
+     */
     public void setN(int n) {
         this.n = n;
     }

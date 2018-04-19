@@ -18,12 +18,11 @@ public class Principal {
 
     public static void main(String[] args) {
         /**
-         * Declaração da lista
+         * Declaração e instanciamento da lista.
          */
         Lista lst = new Lista();
         // Controla o menu da lista
         int opcao = -1;
-
         while (opcao != 99) {
             opcao = Integer.parseInt(JOptionPane.showInputDialog("\t### Lista Sequencial ###\n"
                     + "Selecione a opção desejada:\n"

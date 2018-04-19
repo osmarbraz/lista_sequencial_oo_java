@@ -1,4 +1,8 @@
-
+/**
+ * 
+ * Nó a ser armazenado na lista.
+ * 
+ */
 public class No {
 
     private int dado;
