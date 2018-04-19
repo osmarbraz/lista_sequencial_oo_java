@@ -118,7 +118,7 @@ public class Lista {
     }
 
     /**
-     * Excluir um elemento da lista pela posição.
+     * Excluir um Nó da lista pela posição.
      *
      * @param _k Posição do elemento a ser excluído da lista.
      * @return Verdadeiro ou falso se excluiu o valor da posição.
