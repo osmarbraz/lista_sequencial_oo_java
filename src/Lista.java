@@ -19,7 +19,7 @@ public class Lista {
     private No lista[] = new No[TAMANHO_LISTA];
 
     public Lista() {
-        //Inicializa a lista o 0 elementos
+        //Inicializa a lista o 0 nós
         n = 0;
     }
 
@@ -42,7 +42,7 @@ public class Lista {
     }
 
     /**
-     * Insere um elemento em uma posição especifica da lista.
+     * Insere um nó em uma posição especifica da lista.
      *
      * @param _novo Novo nó a ser inserido.
      * @param _k Posição a ser inserida o valor.
@@ -52,13 +52,13 @@ public class Lista {
         if (n < TAMANHO_LISTA) {
             //Verifica se a posição está no intervalo de valores da lista.
             if ((_k >= 0) && (_k <= getN())) {
-                //Desloca os elementos do fim até a posição k
+                //Desloca os nós do fim até a posição k
                 for (int i = n - 1; i >= _k; i--) {
                     lista[i + 1] = lista[i];
                 }
                 //Insere o novo valor na posição k.
                 lista[_k] = _novo;
-                //Incrementa a quantidade de elementos.
+                //Incrementa a quantidade de nós.
                 setN(getN() + 1);
                 return true;
             } else {
@@ -72,7 +72,7 @@ public class Lista {
     }
 
     /**
-     * Insere um elemento no início da lista.
+     * Insere um nó no início da lista.
      *
      * @param _novo Novo nó a ser inserido.
      * @return Verdadeiro ou falso se conseguiu incluir o novo valor.
@@ -82,7 +82,7 @@ public class Lista {
     }
 
     /**
-     * Insere um elemento no final da lista.
+     * Insere um nó no final da lista.
      *
      * @param _novo Novo nó a ser inserido.
      * @return Verdadeiro ou falso se conseguiu incluir o novo valor.
@@ -92,7 +92,7 @@ public class Lista {
     }
 
     /**
-     * Inclui de forma ordenado um elemento na lista levando em consideração o
+     * Inclui de forma ordenado um nó na lista levando em consideração o
      * seu valor.
      *
      * @param _novo Novo nó ser inserido.
@@ -120,18 +120,18 @@ public class Lista {
     /**
      * Excluir um Nó da lista pela posição.
      *
-     * @param _k Posição do elemento a ser excluído da lista.
+     * @param _k Posição do nó a ser excluído da lista.
      * @return Verdadeiro ou falso se excluiu o valor da posição.
      */
     public boolean excluirPosicao(int _k) {
         if (n != 0) {
-            //Verifica se a posição está no intervalo de elementos da lista.
+            //Verifica se a posição está no intervalo de nós da lista.
             if ((_k >= 0) && (_k < getN())) {
-                //Desloca os elementos do fim até a posição k da lista.
+                //Desloca os nós do fim até a posição k da lista.
                 for (int i = _k; i < getN(); i++) {
                     lista[i] = lista[i + 1];
                 }
-                //Decrementa a quantidade de elementos da lista.
+                //Decrementa a quantidade de nós da lista.
                 setN(getN() - 1);
                 return true;
             } else {
@@ -145,7 +145,7 @@ public class Lista {
     }
 
     /**
-     * Excluir um elemento do final da lista.
+     * Excluir um nó do final da lista.
      *
      * @return Verdadeiro ou falso se excluiu o valor do final.
      */
@@ -154,7 +154,7 @@ public class Lista {
     }
 
     /**
-     * Excluir um elemento do início da lista.
+     * Excluir um nó do início da lista.
      *
      * @return Verdadeiro ou falso se excluiu o valor do início.
      */
@@ -163,7 +163,7 @@ public class Lista {
     }
 
     /**
-     * Excluir um elemento da lista pelo valor.
+     * Excluir um nó da lista pelo valor.
      *
      * @param _valor Nó a ser excluído da lista.
      * @return Verdadeiro ou falso se excluiu o valor.
@@ -171,7 +171,7 @@ public class Lista {
     public boolean excluirValor(No _valor) {
         if (getN() != 0) {
             int i = 0;
-            //Procura a posição do elemento na lista.
+            //Procura a posição do nó na lista.
             //Compara o valor na lista ou até chegar no final da lista.
             while ((i < getN()) && (_valor.getDado() != lista[i].getDado())) {
                 i = i + 1;
@@ -192,7 +192,7 @@ public class Lista {
     }
 
     /**
-     * Retorna a posição de um elemento na lista.
+     * Retorna a posição de um nó na lista.
      *
      * @param _valor Nó a ser procurado na lista.
      * @return A posição de valor na lsita.
@@ -200,7 +200,7 @@ public class Lista {
     public int posicaoValor(No _valor) {
         if (getN() != 0) {
             int i = 0;
-            //Procura a posição do elemento na lista.
+            //Procura a posição do nó na lista.
             //Compara o valor na lista ou até chegar no final da lista.
             while ((i < getN()) && (_valor.getDado() != lista[i].getDado())) {
                 i = i + 1;
