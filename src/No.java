@@ -8,14 +8,14 @@ public class No {
     private int dado;
 
     /**
-     * Construtor sem argumentos.
+     * Construtor sem parâmetros.
      */
     public No() {
         this.dado = 0;
     }
 
     /**
-     * Construtor com argumentos.
+     * Construtor com parâmetros.
      *
      * @param dado um valor do tipo inteiro.
      */
