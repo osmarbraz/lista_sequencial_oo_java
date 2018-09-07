@@ -20,7 +20,7 @@ public class Principal {
         /**
          * Declaração e instanciamento da lista.
          */
-        Lista lst = new Lista();
+        Lista lista = new Lista();
         // Controla o menu da lista
         int opcao = -1;
         while (opcao != 99) {
@@ -42,10 +42,10 @@ public class Principal {
                     + "99- Sair\n"));
             switch (opcao) {
                 case 1: {
-                    if (lst.estaVazia()) {
+                    if (lista.estaVazia()) {
                         JOptionPane.showMessageDialog(null, "Lista vazia!");
                     } else {
-                        JOptionPane.showMessageDialog(null, "Listagem \n" + lst.listar());
+                        JOptionPane.showMessageDialog(null, "Listagem \n" + lista.listar());
                     }
                     break;
                 }
@@ -54,7 +54,7 @@ public class Principal {
                     No novo = new No();
                     //Preenche o valor do dado do nó
                     novo.setDado(leitura());
-                    if (lst.inserirInicio(novo) == true) {
+                    if (lista.inserirInicio(novo) == true) {
                         JOptionPane.showMessageDialog(null, "Nó inserido no início com Sucesso!");
                     } else {
                         JOptionPane.showMessageDialog(null, "Nó não inserido no início!");
@@ -66,7 +66,7 @@ public class Principal {
                     No novo = new No();
                     //Preenche o valor do dado do nó
                     novo.setDado(leitura());
-                    if (lst.inserirFim(novo) == true) {
+                    if (lista.inserirFim(novo) == true) {
                         JOptionPane.showMessageDialog(null, "Nó inserido no fim com Sucesso!");
                     } else {
                         JOptionPane.showMessageDialog(null, "Nó não inserido no fim!");
@@ -80,7 +80,7 @@ public class Principal {
                     No novo = new No();
                     //Preenche o valor do dado do nó
                     novo.setDado(leitura());
-                    if (lst.inserirPosicao(novo, k) == true) {
+                    if (lista.inserirPosicao(novo, k) == true) {
                         JOptionPane.showMessageDialog(null, "Nó inserido na posição " + k + " com Sucesso!");
                     } else {
                         JOptionPane.showMessageDialog(null, "Nó não inserido na posição " + k + "!");
@@ -92,7 +92,7 @@ public class Principal {
                     No novo = new No();
                     //Preenche o valor do dado do nó
                     novo.setDado(leitura());
-                    if (lst.inserirOrdenado(novo) == true) {
+                    if (lista.inserirOrdenado(novo) == true) {
                         JOptionPane.showMessageDialog(null, "Nó inserido ordenado com Sucesso!");
                     } else {
                         JOptionPane.showMessageDialog(null, "Nó não inserido ordenado!");
@@ -100,7 +100,7 @@ public class Principal {
                     break;
                 }
                 case 6: {
-                    if (lst.excluirInicio()) {
+                    if (lista.excluirInicio()) {
                         JOptionPane.showMessageDialog(null, "O Nó do início foi excluído com Sucesso!");
                     } else {
                         JOptionPane.showMessageDialog(null, "Nó do início não foi excluído!");
@@ -108,7 +108,7 @@ public class Principal {
                     break;
                 }
                 case 7: {
-                    if (lst.excluirFim()) {
+                    if (lista.excluirFim()) {
                         JOptionPane.showMessageDialog(null, "O Nó do fim foi excluído com Sucesso!");
                     } else {
                         JOptionPane.showMessageDialog(null, "Nó do fim não foi excluído!");
@@ -117,7 +117,7 @@ public class Principal {
                 }
                 case 8: {
                     int k = Integer.parseInt(JOptionPane.showInputDialog("Digite a posição a ser excluída:"));
-                    if (lst.excluirPosicao(k)) {
+                    if (lista.excluirPosicao(k)) {
                         JOptionPane.showMessageDialog(null, "O valor da posição " + k + " foi excluído com Sucesso!");
                     } else {
                         JOptionPane.showMessageDialog(null, "Valor não foi excluído!");
@@ -129,7 +129,7 @@ public class Principal {
                     No valor = new No();
                     //Preenche o valor do dado do nó
                     valor.setDado(Integer.parseInt(JOptionPane.showInputDialog("Digite o valor do Nó a ser excluído:")));
-                    if (lst.excluirValor(valor)) {
+                    if (lista.excluirValor(valor)) {
                         JOptionPane.showMessageDialog(null, "O valor " + valor.getDado() + " foi excluído com Sucesso!");
                     } else {
                         JOptionPane.showMessageDialog(null, "Valor não foi excluído!");
@@ -141,20 +141,20 @@ public class Principal {
                     No valor = new No();
                     //Preenche o valor do dado do nó
                     valor.setDado(Integer.parseInt(JOptionPane.showInputDialog("Digite o valor a ser procurado:")));
-                    int posicao = lst.posicaoValor(valor);
+                    int posicao = lista.posicaoValor(valor);
                     JOptionPane.showMessageDialog(null, "O valor " + valor.getDado() + " esta na posição " + posicao);
                     break;
                 }
                 case 11: {
-                    JOptionPane.showMessageDialog(null, "Quantidade de Nós na lista : " + lst.getN());
+                    JOptionPane.showMessageDialog(null, "Quantidade de Nós na lista : " + lista.getN());
                     break;
                 }
                 case 12: {
-                    JOptionPane.showMessageDialog(null, "Lista está cheia : " + lst.estaCheia());
+                    JOptionPane.showMessageDialog(null, "Lista está cheia : " + lista.estaCheia());
                     break;
                 }
                 case 13: {
-                    JOptionPane.showMessageDialog(null, "Lista está vazia : " + lst.estaVazia());
+                    JOptionPane.showMessageDialog(null, "Lista está vazia : " + lista.estaVazia());
                     break;
                 }
             }
