@@ -18,7 +18,7 @@ public class Principal {
 
     public static void main(String[] args) {
         /**
-         * Declaração e instanciamento da lista.
+         * Declara e instancia a lista.
          */
         Lista lista = new Lista();
         // Controla o menu da lista

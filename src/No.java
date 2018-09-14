@@ -47,6 +47,6 @@ public class No {
      * @return Uma string com o valor do dado do nó.
      */
     public String toString() {
-        return getDado() + "";
+         return "OID: " + this + " / dado: " + getDado();
     }
 }
