@@ -24,7 +24,7 @@ public class No {
     }
 
     /**
-     * Recuporador de dado.
+     * Recuperador de dado.
      *
      * @return Um inteiro com o dado do nó.
      */
@@ -44,7 +44,7 @@ public class No {
     /**
      * Retorna o valor em String do dado.
      * 
-     * @return Uma string com o dado do nó.
+     * @return Uma string com o valor do dado do nó.
      */
     public String toString() {
         return getDado() + "";

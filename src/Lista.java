@@ -18,9 +18,12 @@ public class Lista {
      */
     private No lista[] = new No[TAMANHO_LISTA];
 
+    /**
+     * Construtor sem parâmetro da lista.
+     */
     public Lista() {
-        //Inicializa a lista o 0 nós
-        n = 0;
+        //Inicializa a lista com o 0 nós
+        this.n = 0;
     }
 
     /**
