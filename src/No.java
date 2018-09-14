@@ -1,7 +1,8 @@
+
 /**
- * 
+ *
  * Nó a ser armazenado na lista.
- * 
+ *
  */
 public class No {
 
@@ -43,10 +44,10 @@ public class No {
 
     /**
      * Retorna o valor em String do dado.
-     * 
+     *
      * @return Uma string com o valor do dado do nó.
      */
-    public String toString() {
-         return "OID: " + this + " / dado: " + getDado();
+    public String paraString() {
+        return "OID: " + this + " / dado: " + getDado();
     }
 }
