@@ -27,7 +27,7 @@ public class Lista {
     }
 
     /**
-     * Recuporador de N.
+     * Recuperador de N.
      *
      * @return Um inteiro com a quantidade de nós da lista.
      */
@@ -47,10 +47,10 @@ public class Lista {
     /**
      * Insere um nó no início da lista.
      *
-     * @param dado Um dado do novo nó da lista.
+     * @param valor Um novo valor de um nó a ser inserido na lista.
      * @return Verdadeiro ou falso se conseguiu incluir o novo valor.
      */
-    public boolean inserirInicio(int dado) {
+    public boolean inserirInicio(int valor) {
         if (n < TAMANHO_LISTA) {
             //Desloca os nós do fim até a posição 0
             for (int i = n - 1; i >= 0; i--) {
@@ -58,7 +58,7 @@ public class Lista {
             }
             //Instancia o novo nó
             No novo = new No();
-            novo.setDado(dado);
+            novo.setDado(valor);
             //Insere o novo valor na posição 0.            
             lista[0] = novo;
             //Incrementa a quantidade de nós.
@@ -73,11 +73,11 @@ public class Lista {
     /**
      * Insere um nó em uma posição especifica da lista.
      *
-     * @param dado Um dado do novo nó da lista.
+     * @param valor Um novo valor de um nó a ser inserido na lista.
      * @param k Posição a ser inserida o valor.
      * @return Verdadeiro ou falso se conseguiu incluir o novo valor.
      */
-    public boolean inserirPosicao(int dado, int k) {
+    public boolean inserirPosicao(int valor, int k) {
         if (n < TAMANHO_LISTA) {
             //Verifica se a posição está no intervalo de valores da lista.
             if ((k >= 0) && (k <= getN())) {
@@ -87,7 +87,7 @@ public class Lista {
                 }
                 //Instancia o novo nó
                 No novo = new No();
-                novo.setDado(dado);
+                novo.setDado(valor);
                 //Insere o novo valor na posição k.
                 lista[k] = novo;
                 //Incrementa a quantidade de nós.
@@ -106,10 +106,10 @@ public class Lista {
     /**
      * Insere um nó no final da lista.
      *
-     * @param dado Um dado do novo nó da lista.
+     * @param valor Um novo valor de um nó a ser inserido na lista.
      * @return Verdadeiro ou falso se conseguiu incluir o novo valor.
      */
-    public boolean inserirFim(int dado) {
+    public boolean inserirFim(int valor) {
         if (n < TAMANHO_LISTA) {
             //Desloca os nós do fim até a posição n
             for (int i = n - 1; i >= getN(); i--) {
@@ -117,7 +117,7 @@ public class Lista {
             }
             //Instancia o novo nó
             No novo = new No();
-            novo.setDado(dado);
+            novo.setDado(valor);
             //Insere o novo valor na posição n.
             lista[getN()] = novo;
             //Incrementa a quantidade de nós.
@@ -133,13 +133,13 @@ public class Lista {
      * Inclui de forma ordenado um nó na lista levando em consideração o seu
      * valor.
      *
-     * @param dado Um dado do novo nó da lista.
+     * @param valor Um novo valor de um nó a ser inserido na lista.
      * @return Verdadeiro ou falso se conseguiu incluir o novo valor.
      */
-    public boolean inserirOrdenado(int dado) {
+    public boolean inserirOrdenado(int valor) {
         if (n < TAMANHO_LISTA) {
             int j = 0;
-            while ((j < getN()) && (dado > lista[j].getDado())) {
+            while ((j < getN()) && (valor > lista[j].getDado())) {
                 j = j + 1;
             }
             if (j <= n) {
@@ -149,7 +149,7 @@ public class Lista {
                 }
                 //Instancia o novo nó
                 No novo = new No();
-                novo.setDado(dado);
+                novo.setDado(valor);
                 //Insere o novo valor na posição j.
                 lista[j] = novo;
                 //Incrementa a quantidade de nós.
@@ -222,15 +222,15 @@ public class Lista {
     /**
      * Excluir um nó da lista pelo valor.
      *
-     * @param dado Dado a ser excluído da lista.
+     * @param valor Um valor de um nó a ser excluído da lista.
      * @return Verdadeiro ou falso se excluiu o valor.
      */
-    public boolean excluirValor(int dado) {
+    public boolean excluirValor(int valor) {
         if (getN() != 0) {
             int j = 0;
             //Procura a posição do nó na lista.
             //Compara o valor na lista ou até chegar no final da lista.
-            while ((j < getN()) && (dado != lista[j].getDado())) {
+            while ((j < getN()) && (valor != lista[j].getDado())) {
                 j = j + 1;
             }
             //Verifica se a posição esta dentro do intervalo da lista
@@ -255,7 +255,7 @@ public class Lista {
     /**
      * Retorna o dado de uma posição na lista.
      *
-     * @param k Posição do nó a ser consultada na lista.
+     * @param k Posição do nó a ser consultado na lista.
      * @return A posição de valor na lsita.
      */
     public int procurarPosicao(int k) {
@@ -276,15 +276,15 @@ public class Lista {
     /**
      * Retorna a posição de um nó na lista.
      *
-     * @param dado Dado a ser procurado na lista.
+     * @param valor O valor de um nó a ser procurado na lista.
      * @return A posição de valor na lsita.
      */
-    public int posicaoValor(int dado) {
+    public int posicaoValor(int valor) {
         if (getN() != 0) {
             int i = 0;
             //Procura a posição do nó na lista.
             //Compara o valor na lista ou até chegar no final da lista.
-            while ((i < getN()) && (dado != lista[i].getDado())) {
+            while ((i < getN()) && (valor != lista[i].getDado())) {
                 i = i + 1;
             }
             //Verifica se a posição esta dentro do intervalo da lista
@@ -329,5 +329,14 @@ public class Lista {
      */
     public boolean estaVazia() {
         return getN() == 0;
+    }
+    
+     /**
+     * Retorna a quantidade de Nós da lista.
+     *
+     * @return A quantidade de Nós da lista.
+     */
+    public int getQuantidade() {
+        return getN();
     }
 }

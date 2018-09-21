@@ -145,7 +145,7 @@ public class Principal {
                     break;
                 }
                 case 12: {
-                    JOptionPane.showMessageDialog(null, "Quantidade de Nós na lista : " + lista.getN());
+                    JOptionPane.showMessageDialog(null, "Quantidade de Nós na lista : " + lista.getQuantidade());
                     break;
                 }
                 case 13: {
