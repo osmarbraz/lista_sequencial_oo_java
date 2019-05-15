@@ -308,7 +308,7 @@ public class Lista {
         //String de retorno
         String temp = "";
         for (int i = 0; i < getN(); i++) {
-            temp = temp + (i) + "-" + lista[i] + "\n";
+            temp = temp + (i) + "-" + lista[i].paraString() + "\n";
         }
         return temp;
     }
