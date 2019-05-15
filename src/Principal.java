@@ -140,7 +140,7 @@ public class Principal {
                 case 11: {
                     //Preenche o valor do dado
                     int dado = Integer.parseInt(JOptionPane.showInputDialog("Digite o valor a ser procurado:"));
-                    int posicao = lista.posicaoValor(dado);
+                    int posicao = lista.procuraValor(dado);
                     JOptionPane.showMessageDialog(null, "O valor " + dado + " está na posição " + posicao);
                     break;
                 }

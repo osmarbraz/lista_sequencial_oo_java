@@ -155,7 +155,7 @@ public class Lista {
                 //Incrementa a quantidade de nós.
                 setN(getN() + 1);
             } else {
-                System.out.print("Posição Inválida!");
+                System.out.print("Posição Inválida!\n");
                 return false;
             }
         } else {
@@ -196,7 +196,7 @@ public class Lista {
                 return false;
             }
         } else {
-            System.out.println("Excluir posição - Lista vazia.");
+            System.out.println("Excluir posição - Lista vazia.\n");
             return false;
         }
     }
@@ -214,7 +214,7 @@ public class Lista {
             setN(getN() - 1);
             return true;
         } else {
-            System.out.println("Excluir fim - Lista vazia.");
+            System.out.println("Excluir fim - Lista vazia.\n");
             return false;
         }
     }
@@ -243,11 +243,11 @@ public class Lista {
                 setN(getN() - 1);
                 return true;
             } else {
-                System.out.println("Excluir valor - Valor não existe na lista.");
+                System.out.println("Excluir valor - Valor não existe na lista.\n");
                 return false;
             }
         } else {
-            System.out.println("Excluir valor - Lista vazia.");
+            System.out.println("Excluir valor - Lista vazia.\n");
             return false;
         }
     }
@@ -264,11 +264,11 @@ public class Lista {
             if ((k >= 0) && (k < getN())) {
                 return lista[k].getDado();
             } else {
-                System.out.println("Procurar posição - Posição inválida.");
+                System.out.println("Procurar posição - Posição inválida.\n");
                 return -1;
             }
         } else {
-            System.out.println("Procurar posição - Lista vazia.");
+            System.out.println("Procurar posição - Lista vazia.\n");
             return -1;
         }
     }
@@ -279,7 +279,7 @@ public class Lista {
      * @param valor O valor de um nó a ser procurado na lista.
      * @return A posição de valor na lsita.
      */
-    public int posicaoValor(int valor) {
+    public int procuraValor(int valor) {
         if (getN() != 0) {
             int i = 0;
             //Procura a posição do nó na lista.
@@ -294,7 +294,7 @@ public class Lista {
                 return -1;
             }
         } else {
-            System.out.println("Posição Valor - Lista Vazia.");
+            System.out.println("Posição Valor - Lista Vazia.\n");
             return -1;
         }
     }
