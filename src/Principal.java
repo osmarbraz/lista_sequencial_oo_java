@@ -94,7 +94,7 @@ public class Principal {
                 }
                 case 6: {
                     if (lista.excluirInicio()) {
-                        JOptionPane.showMessageDialog(null, "O Nó do início foi excluído com Sucesso!");
+                        JOptionPane.showMessageDialog(null, "Nó do início foi excluído com Sucesso!");
                     } else {
                         JOptionPane.showMessageDialog(null, "Nó do início não foi excluído!");
                     }
@@ -111,7 +111,7 @@ public class Principal {
                 }
                 case 8: {
                     if (lista.excluirFim()) {
-                        JOptionPane.showMessageDialog(null, "O Nó do fim foi excluído com Sucesso!");
+                        JOptionPane.showMessageDialog(null, "Nó do fim foi excluído com Sucesso!");
                     } else {
                         JOptionPane.showMessageDialog(null, "Nó do fim não foi excluído!");
                     }
@@ -156,7 +156,7 @@ public class Principal {
                     JOptionPane.showMessageDialog(null, "Lista está vazia : " + lista.estaVazia());
                     break;
                 }
-            }
-        }
-    }
-}
+            }//Fim switch
+        }//Fim while
+    }//Fim main
+}//Fim Principal

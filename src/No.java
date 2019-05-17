@@ -6,6 +6,9 @@
  */
 public class No {
 
+    /**
+     * Dado a ser armazenado no nó.
+     */
     private int dado;
 
     /**
