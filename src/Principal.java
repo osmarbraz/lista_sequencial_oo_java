@@ -15,15 +15,24 @@ public class Principal {
     public static int leitura() {
         return Integer.parseInt(JOptionPane.showInputDialog("Digite um valor:"));
     }
-
+    
+   /**
+     * Método principal.
+     * 
+     * @param args 
+     */    
     public static void main(String[] args) {
         /**
          * Declara e instancia a lista.
          */
         Lista lista = new Lista();
+        
         // Controla o menu da lista
         int opcao = -1;
+        
+        //Laço do menu de opções
         while (opcao != 99) {
+            //Monta o menu de opções
             opcao = Integer.parseInt(JOptionPane.showInputDialog("\t### Lista Sequencial ###\n"
                     + "Selecione a opção desejada:\n"
                     + " 1- Listar Nós\n"
